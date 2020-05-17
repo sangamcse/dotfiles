@@ -1,2 +1,3 @@
-*.lock*
 *oh-my-zsh
+
+tmp/

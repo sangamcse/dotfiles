@@ -5,6 +5,8 @@ cd "$DIR"
 
 . ../scripts/functions.sh
 
+sudo -v
+
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~)"
 OHMYZSH_PATH="$SOURCE/oh-my-zsh"
@@ -17,13 +19,11 @@ curl https://raw.githubusercontent.com/zeit/zeit.zsh-theme/master/zeit.zsh-theme
 
 info "Configuraing zsh..."
 
-rm -rf "$DESTINATION/.zsh*"
+rm -rf $DESTINATION/.zsh*
 
 find . -name ".zsh*" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
-
-chsh -s $(which zsh)
 
 success "Finished configuring zsh."
