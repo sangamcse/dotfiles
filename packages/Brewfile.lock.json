@@ -15,6 +15,9 @@
       },
       "mongodb/brew": {
         "revision": "1bc63bca35f251ad6ad9874cece10f1cfca475d5"
+      },
+      "flschweiger/flutter": {
+        "revision": "c21dd74e5f216a24ce7db61a97f24970f8bfa472"
       }
     },
     "cask": {
@@ -160,6 +163,30 @@
         "version": "7.11.3.2198,20200415",
         "options": {
           "full_name": "amazon-music"
+        }
+      },
+      "tunnelblick": {
+        "version": "3.8.2,5480",
+        "options": {
+          "full_name": "tunnelblick"
+        }
+      },
+      "ngrok": {
+        "version": "latest",
+        "options": {
+          "full_name": "ngrok"
+        }
+      },
+      "flutter": {
+        "version": "latest",
+        "options": {
+          "full_name": "flutter"
+        }
+      },
+      "android-studio": {
+        "version": "3.6.3.0,192.6392135",
+        "options": {
+          "full_name": "android-studio"
         }
       }
     },

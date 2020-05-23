@@ -13,12 +13,21 @@
     "window.zoomLevel": 0,
     "gitlens.keymap": "alternate",
     "git.autofetch": true,
-    "terminal.integrated.shell.osx": "/bin/zsh",
     "diffEditor.ignoreTrimWhitespace": false,
     "[ruby]": {
         "editor.tabSize": 2
     },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    "editor.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
+    "editor.fontSize": 14,
+    "editor.cursorStyle": "line-thin",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontSize": 14,
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
+    "terminal.integrated.fontLigatures": true,
+    "[scss]": {
+        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+    },
+    "markdown.preview.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace"
 }
