@@ -1,6 +1,7 @@
 [user]
     name = Sangam Kumar
     email = sangamcse.dev@gmail.com
+    signingkey = 8438490C14CD7A4A
 [apply]
     whitespace = fix
 [core]
