@@ -1,6 +1,7 @@
-git@github.com:interviewstreet/hackerrank.git
-git@github.com:interviewstreet/frontend-core.git
 git@github.com:interviewstreet/candidate-site-frontend.git
-git@github.com:interviewstreet/role-service.git
+git@github.com:interviewstreet/codepair-frontend.git
 git@github.com:interviewstreet/content-service.git
+git@github.com:interviewstreet/frontend-core.git
+git@github.com:interviewstreet/hackerrank.git
+git@github.com:interviewstreet/role-service.git
 git@github.com:sangamcse/work.git

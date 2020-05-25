@@ -10,8 +10,6 @@ DESTINATION="$(realpath ~)"
 
 info "Configuraing tmux..."
 
-rm -rf "$DESTINATION/.tmux*"
-
 find . -name ".tmux*" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"

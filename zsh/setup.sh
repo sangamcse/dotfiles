@@ -19,8 +19,6 @@ curl https://raw.githubusercontent.com/zeit/zeit.zsh-theme/master/zeit.zsh-theme
 
 info "Configuraing zsh..."
 
-rm -rf $DESTINATION/.zsh*
-
 find . -name ".zsh*" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
