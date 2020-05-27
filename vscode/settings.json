@@ -1,33 +1,34 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Theme Shadow",
-    "editor.roundedSelection": false,
-    "editor.minimap.enabled": true,
-    "editor.minimap.renderCharacters": false,
-    "editor.minimap.maxColumn": 100,
-    "editor.renderWhitespace": "boundary",
-    "editor.renderIndentGuides": true,
-    "editor.suggestSelection": "first",
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "window.zoomLevel": 0,
-    "gitlens.keymap": "alternate",
-    "git.autofetch": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "[ruby]": {
-        "editor.tabSize": 2
-    },
-    "editor.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
-    "editor.fontSize": 14,
-    "editor.cursorStyle": "line-thin",
-    "terminal.integrated.shell.osx": "/bin/zsh",
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.fontSize": 14,
-    "editor.fontLigatures": true,
-    "terminal.integrated.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
-    "terminal.integrated.fontLigatures": true,
-    "[scss]": {
-        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
-    },
-    "markdown.preview.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace"
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Theme Shadow",
+  "editor.roundedSelection": false,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.maxColumn": 100,
+  "editor.renderWhitespace": "boundary",
+  "editor.renderIndentGuides": true,
+  "editor.suggestSelection": "first",
+  "files.trimTrailingWhitespace": true,
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "window.zoomLevel": 0,
+  "gitlens.keymap": "alternate",
+  "git.autofetch": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[ruby]": {
+    "editor.tabSize": 2
+  },
+  "editor.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
+  "editor.fontSize": 14,
+  "editor.cursorStyle": "line-thin",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontSize": 14,
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
+  "terminal.integrated.fontLigatures": true,
+  "[scss]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+  },
+  "markdown.preview.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace"
 }
