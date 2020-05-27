@@ -30,4 +30,4 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 eval "$(rbenv init - zsh)"
 eval "$(fnm env)"
 
-alias grm-branch="git branch | xargs git branch -D"
+export GPG_TTY=$(tty)

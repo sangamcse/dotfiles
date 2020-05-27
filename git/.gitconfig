@@ -33,5 +33,8 @@
         git add -A; \
         git commit -s -m \"$(curl --silent --fail http://whatthecommit.com/index.txt)\"; \
     }; autocommit"
+    brm = "!rmbranch() { \
+        git branch | xargs git branch -D; \
+    }; rmbranch"
 [commit]
     gpgsign = true
