@@ -15,9 +15,7 @@
   "gitlens.keymap": "alternate",
   "git.autofetch": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "[ruby]": {
-    "editor.tabSize": 2
-  },
+  "editor.tabSize": 2,
   "editor.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
   "editor.fontSize": 14,
   "editor.cursorStyle": "line-thin",
@@ -30,5 +28,8 @@
   "[scss]": {
     "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
-  "markdown.preview.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace"
+  "markdown.preview.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
+  "editor.defaultFormatter": "EditorConfig.EditorConfig",
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true
 }
