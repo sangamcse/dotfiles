@@ -31,3 +31,5 @@ eval "$(rbenv init - zsh)"
 eval "$(fnm env)"
 
 export GPG_TTY=$(tty)
+
+alias dotfiles="cd ~/devlove/dotfiles"
