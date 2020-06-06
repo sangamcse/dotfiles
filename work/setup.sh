@@ -36,5 +36,5 @@ rbenv install "$RUBY_VERSION"
 rbenv global "$RUBY_VERSION"
 rbenv rehash
 
-gem install bundler
-success "Setup of default Ruby is completed. "
+# gem install bundler
+success "Setup of default Ruby is completed."

@@ -5,6 +5,7 @@ eamodio.gitlens
 editorconfig.editorconfig
 esbenp.prettier-vscode
 flowtype.flow-for-vscode
+james-yu.latex-workshop
 kaiwood.endwise
 mgmcdermott.vscode-language-babel
 mikestead.dotenv

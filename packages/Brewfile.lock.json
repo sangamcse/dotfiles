@@ -188,6 +188,12 @@
         "options": {
           "full_name": "openvpn-connect-beta"
         }
+      },
+      "basictex": {
+        "version": "2020.0407",
+        "options": {
+          "full_name": "basictex"
+        }
       }
     },
     "brew": {

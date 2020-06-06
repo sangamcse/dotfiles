@@ -39,4 +39,9 @@ find * -name "*.list" | while read fn; do
     success "Finished installing $1 packages."
 done
 
+info "Installing latex dependencies..."
+sudo tlmgr update --self
+sudo tlmgr install latexmk
+success "latex dependecies installation completed."
+
 chsh -s $(which zsh)
