@@ -9,7 +9,6 @@
   "editor.renderIndentGuides": true,
   "editor.suggestSelection": "first",
   "files.trimTrailingWhitespace": true,
-  "editor.formatOnSave": true,
   "files.insertFinalNewline": true,
   "window.zoomLevel": 0,
   "gitlens.keymap": "alternate",
@@ -83,5 +82,27 @@
     "*.synctex.gz(busy)",
     "*.nav",
     "*_temp.tex"
-  ]
+  ],
+  "[html]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "ruby.lint": {
+    "reek": true,
+    "rubocop": true,
+    "ruby": true,
+    "fasterer": true,
+    "debride": true,
+    "ruby-lint": true
+  },
+  "rubyTestExplorer.testFramework": "rspec"
 }
