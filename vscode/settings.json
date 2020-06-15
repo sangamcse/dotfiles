@@ -25,6 +25,7 @@
   "terminal.integrated.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
   "terminal.integrated.fontLigatures": true,
   "[scss]": {
+    "editor.formatOnSave": false,
     "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
   "markdown.preview.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
@@ -84,7 +85,7 @@
     "*_temp.tex"
   ],
   "[html]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[json]": {
@@ -94,7 +95,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "ruby.lint": {
     "reek": true,
@@ -104,5 +105,9 @@
     "debride": true,
     "ruby-lint": true
   },
-  "rubyTestExplorer.testFramework": "rspec"
+  "rubyTestExplorer.testFramework": "rspec",
+  "editor.formatOnSave": true,
+  "[css]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+  }
 }
