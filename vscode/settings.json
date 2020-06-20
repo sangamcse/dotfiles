@@ -109,5 +109,6 @@
   "editor.formatOnSave": true,
   "[css]": {
     "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
-  }
+  },
+  "python.envFile": "${workspaceFolder}/nbenv"
 }

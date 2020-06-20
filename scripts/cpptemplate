@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if [[ $1 != *.cpp ]]
+then
+    echo "$(tput setaf 1)ERROR: $1: Please provide correct file name, e.g., $(tput smul)example.cpp$(tput rmul).$(tput sgr 0)"
+    exit 1
+fi
+
+DESTINATION=$(realpath .)
+FILE_NAME="$DESTINATION/$1"
+
+template () {
+    cat <<EOF
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define ar array
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+}
+
+EOF
+}
+
+template > $FILE_NAME

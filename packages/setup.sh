@@ -10,9 +10,9 @@ COMMENT=\#*
 sudo -v
 
 if ! [ -x "$(command -v brew)" ]; then
-  info "Installing Homebrew..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  success "Finished installing Homebrew."
+    info "Installing Homebrew..."
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    success "Finished installing Homebrew."
 fi
 
 info "Installing Brewfile packages..."

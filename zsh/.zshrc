@@ -32,8 +32,13 @@ eval "$(fnm env)"
 
 export GPG_TTY=$(tty)
 
-alias dotfiles="cd ~/devlove/dotfiles"
+DOTFILES="$HOME/devlove/dotfiles"
+alias dotfiles="cd $DOTFILES"
+export PATH="$DOTFILES/scripts:$PATH"
 
+export PATH="/Library/TeX/texbin/:$PATH"
+export PATH="$HOME/Library/Android/sdk/tools:$PATH"
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="/Library/TeX/texbin/:$PATH"
 
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;

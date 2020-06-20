@@ -2,7 +2,16 @@ root = true
 
 [*]
 indent_style = space
-indent_size = 4
+indent_size = 2
 charset = utf-8
 trim_trailing_whitespace = false
 insert_final_newline = true
+
+[*.sh]
+indent_size = 4
+
+[cpptemplate]
+indent_size = 4
+
+[.gitconfig]
+indent_size = 4
