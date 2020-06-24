@@ -95,7 +95,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "ruby.lint": {
     "reek": true,
@@ -111,5 +111,9 @@
     "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
   "python.envFile": "${workspaceFolder}/nbenv",
-  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }"
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+  "eslint.format.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.alwaysShowStatus": true,
+  "eslint.quiet": true
 }
