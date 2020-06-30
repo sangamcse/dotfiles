@@ -106,7 +106,6 @@
     "ruby-lint": true
   },
   "rubyTestExplorer.testFramework": "rspec",
-  "editor.formatOnSave": true,
   "[css]": {
     "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
@@ -115,5 +114,6 @@
   "eslint.format.enable": true,
   "eslint.packageManager": "yarn",
   "eslint.alwaysShowStatus": true,
-  "go.useLanguageServer": true
+  "go.useLanguageServer": true,
+  "ruby.rubocop.onSave": false
 }
