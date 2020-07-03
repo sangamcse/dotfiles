@@ -115,5 +115,6 @@
   "eslint.packageManager": "yarn",
   "eslint.alwaysShowStatus": true,
   "go.useLanguageServer": true,
-  "ruby.rubocop.onSave": false
+  "ruby.rubocop.onSave": false,
+  "C_Cpp.updateChannel": "Insiders"
 }
