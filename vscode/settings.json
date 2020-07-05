@@ -85,7 +85,7 @@
     "*_temp.tex"
   ],
   "[html]": {
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[json]": {
@@ -115,6 +115,6 @@
   "eslint.packageManager": "yarn",
   "eslint.alwaysShowStatus": true,
   "go.useLanguageServer": true,
-  "ruby.rubocop.onSave": false,
-  "C_Cpp.updateChannel": "Insiders"
+  "C_Cpp.updateChannel": "Insiders",
+  "ruby.rubocop.useBundler": true,
 }
