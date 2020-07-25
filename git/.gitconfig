@@ -30,8 +30,15 @@
     uncommit = reset --soft HEAD~
     pull = pull --ff-only
     yolo = "!autocommit() { \
+        echo 'How much day(s) back? '; \
+        read days; \
         git add -A; \
-        git commit -s -m \"$(curl --silent --fail http://whatthecommit.com/index.txt)\"; \
+        if [ $days ]; then \
+            DATE=$(date -v-\"$days\"d); \
+            GIT_COMMITTER_DATE=\"$DATE\" git commit -s -m \"$(curl --silent --fail http://whatthecommit.com/index.txt)\" --date=\"$DATE\"; \
+        else \
+            git commit -s -m \"$(curl --silent --fail http://whatthecommit.com/index.txt)\"; \
+        fi \
     }; autocommit"
     brm = "!rmbranch() { \
         git branch | xargs git branch -D; \
