@@ -28,7 +28,7 @@ export PKG_CONFIG_PATH="$(brew --prefix imagemagick@6)/lib/pkgconfig"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 eval "$(rbenv init - zsh)"
-eval "$(fnm env)"
+eval "$(fnm env --multi)"
 
 export GPG_TTY=$(tty)
 

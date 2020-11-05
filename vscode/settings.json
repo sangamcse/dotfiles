@@ -25,8 +25,8 @@
   "terminal.integrated.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
   "terminal.integrated.fontLigatures": true,
   "[scss]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "markdown.preview.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
   "editor.formatOnType": true,
@@ -107,14 +107,45 @@
   },
   "rubyTestExplorer.testFramework": "rspec",
   "[css]": {
-    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+    "editor.defaultFormatter": "bradlc.vscode-tailwindcss"
   },
   "python.envFile": "${workspaceFolder}/nbenv",
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
-  "eslint.format.enable": true,
   "eslint.packageManager": "yarn",
   "eslint.alwaysShowStatus": true,
   "go.useLanguageServer": true,
   "C_Cpp.updateChannel": "Insiders",
   "ruby.rubocop.useBundler": true,
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "explorer.confirmDelete": false,
+  "dart.debugExternalLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "editor.formatOnSave": true,
+  "scssFormatter.singleQuote": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.format.enable": true
 }
