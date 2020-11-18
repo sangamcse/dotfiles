@@ -147,5 +147,5 @@
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
-  "eslint.format.enable": true
+  "eslint.format.enable": true,
 }
