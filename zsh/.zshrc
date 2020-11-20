@@ -60,3 +60,19 @@ alias k='kubectl'
 alias kx='kubectx'
 alias ka='kubectl get pods'
 alias kaw='kubectl get pods -o wide'
+
+
+_qx() {
+    AWS_PROFILE=hr-dev aws eks update-kubeconfig --name qa
+    sleep 5
+    kubectx hr-qa
+    local POD=$(kubectl get pods -n qatest | grep hrw-web-rails | awk 'FNR==1{print $1}')
+    kubectl exec -it $POD -n qatest -c rails bash
+}
+
+_px() {
+    kubectx hr-private
+    local NAMESPACE="${2:-rba}"
+    local POD=$(kubectl get pods -n $NAMESPACE | grep hrw-web-rails | awk 'FNR==1{print $1}')
+    kubectl exec -it $POD -n $NAMESPACE -c rails bash
+}
