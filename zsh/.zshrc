@@ -34,6 +34,7 @@ export GPG_TTY=$(tty)
 
 DOTFILES="$HOME/devlove/dotfiles"
 alias dotfiles="cd $DOTFILES"
+
 export PATH="$DOTFILES/scripts:$PATH"
 
 export PATH="/Library/TeX/texbin/:$PATH"
@@ -61,18 +62,20 @@ alias kx='kubectx'
 alias ka='kubectl get pods'
 alias kaw='kubectl get pods -o wide'
 
-
 _qx() {
-    AWS_PROFILE=hr-dev aws eks update-kubeconfig --name qa
+    AWS_PROFILE=hr-dev aws eks update-kubeconfig --name qa --alias hr-qa
     sleep 5
     kubectx hr-qa
-    local POD=$(kubectl get pods -n qatest | grep hrw-web-rails | awk 'FNR==1{print $1}')
-    kubectl exec -it $POD -n qatest -c rails bash
+    local NAMESPACE="${1:-qatest}"
+    local POD=$(kubectl get pods -n $NAMESPACE | grep hrw-web-rails | awk 'FNR==1{print $1}')
+    kubectl exec -it $POD -n $NAMESPACE -c rails bash
 }
 
 _px() {
+    AWS_PROFILE=hr-dev aws eks update-kubeconfig --name eks-preprod --alias hr-private
+    sleep 5
     kubectx hr-private
-    local NAMESPACE="${2:-rba}"
+    local NAMESPACE="${1:-rba}"
     local POD=$(kubectl get pods -n $NAMESPACE | grep hrw-web-rails | awk 'FNR==1{print $1}')
     kubectl exec -it $POD -n $NAMESPACE -c rails bash
 }

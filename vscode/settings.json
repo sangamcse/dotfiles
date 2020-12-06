@@ -98,12 +98,10 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "ruby.lint": {
-    "reek": true,
     "rubocop": true,
-    "ruby": true,
-    "fasterer": true,
-    "debride": true,
-    "ruby-lint": true
+  },
+  "[ruby]": {
+    "editor.formatOnSave": false,
   },
   "rubyTestExplorer.testFramework": "rspec",
   "[css]": {
@@ -203,4 +201,11 @@
     "editor.formatOnSave": false,
     "editor.suggestSelection": "recentlyUsedByPrefix"
   },
+  "git.confirmSync": false,
+  "solargraph.checkGemVersion": false,
+  "solargraph.useBundler": true,
+  "solargraph.commandPath": "/Users/sangam/.rbenv/shims/solargraph",
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "ruby.intellisense": "rubyLocate",
 }
