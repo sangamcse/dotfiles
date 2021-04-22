@@ -28,7 +28,7 @@ export PKG_CONFIG_PATH="$(brew --prefix imagemagick@6)/lib/pkgconfig"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 eval "$(rbenv init - zsh)"
-eval "$(fnm env --multi)"
+eval "$(fnm env)"
 
 export GPG_TTY=$(tty)
 
@@ -50,12 +50,6 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
 export GOPATH=$HOME/work/
 export PATH=$GOPATH/bin:$PATH
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 alias k='kubectl'
 alias kx='kubectx'
@@ -79,3 +73,22 @@ _px() {
     local POD=$(kubectl get pods -n $NAMESPACE | grep hrw-web-rails | awk 'FNR==1{print $1}')
     kubectl exec -it $POD -n $NAMESPACE -c rails bash
 }
+
+_prod_logx() {
+    AWS_PROFILE=hr-prod aws eks update-kubeconfig --name Hackerrank --alias hr-prod
+    sleep 5
+    kubectx hr-prod
+    local POD_NAME_HELP="${1:-resque-work-3}"
+    local POD=$(kubectl get pods -n production | grep $POD_NAME_HELP | awk 'FNR==1{print $1}')
+    kubectl logs -f po/$POD -c resque-work -n production
+}
+
+#. /usr/local/opt/asdf/asdf.sh
+
+#. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sangam/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sangam/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sangam/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sangam/google-cloud-sdk/completion.zsh.inc'; fi
