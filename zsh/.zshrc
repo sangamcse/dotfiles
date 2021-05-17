@@ -92,3 +92,4 @@ if [ -f '/Users/sangam/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sangam/g
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/sangam/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sangam/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"

@@ -150,15 +150,15 @@
   "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.latex.recipes": [
     {
-      "name": "latexmk (lualatex)",
-      "tools": [
-        "lualatexmk"
-      ]
-    },
-    {
       "name": "latexmk 🔃",
       "tools": [
         "latexmk"
+      ]
+    },
+    {
+      "name": "latexmk (lualatex)",
+      "tools": [
+        "lualatexmk"
       ]
     },
     {
