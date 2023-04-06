@@ -7,7 +7,7 @@ ZSH_THEME="zeit"
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 
 plugins=(
-    git osx jsontools
+  git macos jsontools evalcache
 )
 
 #Locale setting for python iterm2
@@ -18,17 +18,17 @@ DISABLE_UPDATE_PROMPT=true
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="$(brew --prefix openssl)/bin:$PATH"
 export DYLD_LIBRARY_PATH="$(brew --prefix openssl)/lib:$DYLD_LIBRARY_PATH"
+export LIBRARY_PATH="$(brew --prefix openssl)/lib:$LIBRARY_PATH"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export CPPFLAGS="-I$(brew --prefix openssl)/include"
 export PKG_CONFIG_PATH="$(brew --prefix openssl)/lib/pkgconfig"
 export PKG_CONFIG_PATH="$(brew --prefix imagemagick@6)/lib/pkgconfig"
-
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-eval "$(rbenv init - zsh)"
-eval "$(fnm env)"
+_evalcache fnm env --use-on-cd
 
 export GPG_TTY=$(tty)
 
@@ -37,10 +37,9 @@ alias dotfiles="cd $DOTFILES"
 
 export PATH="$DOTFILES/scripts:$PATH"
 
-export PATH="/Library/TeX/texbin/:$PATH"
 export PATH="$HOME/Library/Android/sdk/tools:$PATH"
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
-export PATH="/Library/TeX/texbin/:$PATH"
+export PATH="/Library/TeX/texbin:$PATH"
 
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -48,8 +47,8 @@ PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
 PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
-export GOPATH=$HOME/work/
-export PATH=$GOPATH/bin:$PATH
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
 
 alias k='kubectl'
 alias kx='kubectx'
@@ -83,13 +82,14 @@ _prod_logx() {
     kubectl logs -f po/$POD -c resque-work -n production
 }
 
-#. /usr/local/opt/asdf/asdf.sh
-
-#. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+. /usr/local/opt/asdf/libexec/asdf.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/sangam/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sangam/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/sangam/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sangam/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="/usr/local/Caskroom/flutter/latest/flutter/bin:$PATH"
+
+export PYTHON="$HOME/.asdf/shims/python2"
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Desktop/tts-key.json"

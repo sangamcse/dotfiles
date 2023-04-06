@@ -6,7 +6,6 @@
   "editor.minimap.renderCharacters": false,
   "editor.minimap.maxColumn": 100,
   "editor.renderWhitespace": "boundary",
-  "editor.renderIndentGuides": true,
   "editor.suggestSelection": "first",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
@@ -17,7 +16,7 @@
   "editor.fontFamily": "'Operator Mono Lig', ' Menlo ', ' Apple Color Emoji ', monospace",
   "editor.fontSize": 14,
   "editor.cursorStyle": "line-thin",
-  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 14,
   "editor.fontLigatures": true,
@@ -94,15 +93,14 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "ruby.lint": {
-    "rubocop": true,
+    "rubocop": false,
   },
   "[ruby]": {
     "editor.formatOnSave": false,
   },
-  "rubyTestExplorer.testFramework": "rspec",
   "[css]": {
     "editor.defaultFormatter": "bradlc.vscode-tailwindcss"
   },
@@ -112,10 +110,7 @@
   "eslint.alwaysShowStatus": true,
   "go.useLanguageServer": true,
   "C_Cpp.updateChannel": "Insiders",
-  "ruby.rubocop.useBundler": true,
-  "files.associations": {
-    "*.js": "javascriptreact"
-  },
+  "ruby.rubocop.useBundler": false,
   "[javascriptreact]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
@@ -138,12 +133,12 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
   },
-  "editor.formatOnSave": true,
   "scssFormatter.singleQuote": true,
   "css.validate": false,
   "scss.validate": false,
   "stylelint.enable": true,
   "eslint.codeAction.showDocumentation": {
+
     "enable": true
   },
   "eslint.format.enable": true,
@@ -209,16 +204,41 @@
   "ruby.useBundler": true,
   "ruby.useLanguageServer": true,
   "ruby.intellisense": "rubyLocate",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb",
+    "*.svg": "default"
+  },
   "dart.previewLsp": true,
   "[yaml]": {
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "flow.pathToFlow": "${workspaceFolder}/node_modules/.bin/flow",
+  "tabnine.experimentalAutoImports": true,
+  "svg.preview.mode": "svg",
+  "security.workspace.trust.untrustedFiles": "open",
+  "[cpp]": {
+    "editor.wordBasedSuggestions": false,
+    "editor.suggest.insertMode": "replace",
+    "editor.semanticHighlighting.enabled": true
+  },
+  "python.defaultInterpreterPath": "/Users/sangam/.asdf/shims/python3",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "dart.debugExternalPackageLibraries": true,
+  "explorer.confirmDragAndDrop": false,
+  "[python]": {
+    "editor.tabSize": 4,
+    "gitlens.codeLens.symbolScopes": [
+      "!Module"
+    ],
+    "editor.wordBasedSuggestions": false,
+    "editor.formatOnType": true
+  },
+  "editor.guides.indentation": true,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--fast"
+  ]
 }
