@@ -93,3 +93,6 @@ export PATH="/usr/local/Caskroom/flutter/latest/flutter/bin:$PATH"
 
 export PYTHON="$HOME/.asdf/shims/python2"
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Desktop/tts-key.json"
+
+# added by travis gem
+[ ! -s /Users/sangam/.travis/travis.sh ] || source /Users/sangam/.travis/travis.sh
