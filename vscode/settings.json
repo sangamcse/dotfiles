@@ -96,10 +96,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "ruby.lint": {
-    "rubocop": false,
+    "rubocop": false
   },
   "[ruby]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": false
   },
   "[css]": {
     "editor.defaultFormatter": "bradlc.vscode-tailwindcss"
@@ -138,7 +138,6 @@
   "scss.validate": false,
   "stylelint.enable": true,
   "eslint.codeAction.showDocumentation": {
-
     "enable": true
   },
   "eslint.format.enable": true,

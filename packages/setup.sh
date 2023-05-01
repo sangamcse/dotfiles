@@ -19,8 +19,8 @@ info "Installing Brewfile packages..."
 brew bundle
 success "Finished installing Brewfile packages."
 
-fnm use 10
-success "Switched to Node v10"
+fnm use 14
+success "Switched to Node v14"
 
 gem install cocoapods
 success "Finished installing Cocoapods."
