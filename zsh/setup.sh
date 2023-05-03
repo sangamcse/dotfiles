@@ -17,6 +17,8 @@ ZSH="$OHMYZSH_PATH" sh "$OHMYZSH_PATH/tools/install.sh"
 
 curl https://raw.githubusercontent.com/zeit/zsh-theme/master/vercel.zsh-theme -Lo "$OHMYZSH_PATH/custom/themes/zeit.zsh-theme"
 
+git clone https://github.com/mroth/evalcache ${ZSH_CUSTOM:-$OHMYZSH_PATH/custom}/plugins/evalcache
+
 info "Configuraing zsh..."
 
 find . -name ".zsh*" | while read fn; do

@@ -11,7 +11,8 @@ sudo -v
 
 if ! [ -x "$(command -v brew)" ]; then
     info "Installing Homebrew..."
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    export HOMEBREW_NO_INSTALL_FROM_API=1
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     success "Finished installing Homebrew."
 fi
 

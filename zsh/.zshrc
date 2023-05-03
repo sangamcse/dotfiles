@@ -16,17 +16,33 @@ export LANG=en_US.UTF-8
 
 DISABLE_UPDATE_PROMPT=true
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 source $ZSH/oh-my-zsh.sh
 
-export PATH="$(brew --prefix openssl)/bin:$PATH"
-export DYLD_LIBRARY_PATH="$(brew --prefix openssl)/lib:$DYLD_LIBRARY_PATH"
-export LIBRARY_PATH="$(brew --prefix openssl)/lib:$LIBRARY_PATH"
-export LDFLAGS="-L$(brew --prefix openssl)/lib"
-export CPPFLAGS="-I$(brew --prefix openssl)/include"
-export PKG_CONFIG_PATH="$(brew --prefix openssl)/lib/pkgconfig"
-export PKG_CONFIG_PATH="$(brew --prefix imagemagick@6)/lib/pkgconfig"
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="$(brew --prefix)/opt/openssl@1.1/bin:$PATH"
+export PATH="$(brew --prefix)/opt/imagemagick@6/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$DOTFILES/scripts:$PATH"
+export PATH="$HOME/Library/Android/sdk/tools:$PATH"
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+export PATH="/Library/TeX/texbin:$PATH"
+export PATH="$HOME/perl5/bin${PATH:+:${PATH}}"
+export PATH="$PATH:$(brew --prefix)/opt/go@1.19/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+# arch -x86_64
+
+unset LIBRARY_PATH
+
+export LDFLAGS="-L$(brew --prefix)/opt/openssl@1.1/lib"
+export CPPFLAGS="-I$(brew --prefix)/opt/openssl@1.1/include"
+export PKG_CONFIG_PATH="$(brew --prefix)/opt/openssl@1.1/lib/pkgconfig"
+
+export RUBY_CFLAGS=-DUSE_FFI_CLOSURE_ALLOC
+export optflags="-Wno-error=implicit-function-declaration"
+
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix)/opt/openssl@1.1"
 
 _evalcache fnm env --use-on-cd
 
@@ -35,20 +51,10 @@ export GPG_TTY=$(tty)
 DOTFILES="$HOME/devlove/dotfiles"
 alias dotfiles="cd $DOTFILES"
 
-export PATH="$DOTFILES/scripts:$PATH"
-
-export PATH="$HOME/Library/Android/sdk/tools:$PATH"
-export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
-export PATH="/Library/TeX/texbin:$PATH"
-
-PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
-
-export PATH="$PATH:/usr/local/go/bin"
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
+export PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
+export PERL_MB_OPT="--install_base $HOME/perl5"
+export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
 
 alias k='kubectl'
 alias kx='kubectx'
@@ -82,17 +88,18 @@ _prod_logx() {
     kubectl logs -f po/$POD -c resque-work -n production
 }
 
-. /usr/local/opt/asdf/libexec/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/sangam/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sangam/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/sangam/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sangam/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/usr/local/Caskroom/flutter/latest/flutter/bin:$PATH"
 
 export PYTHON="$HOME/.asdf/shims/python2"
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Desktop/tts-key.json"
 
 # added by travis gem
 [ ! -s /Users/sangam/.travis/travis.sh ] || source /Users/sangam/.travis/travis.sh
+
+eval "$(rbenv init - zsh)"
